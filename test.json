@@ -1,0 +1,38 @@
+{
+    "type": "Composite",
+    "name":"comp1",
+    "objects" : {
+        "vm1": {
+            "type": "VM",
+            "vmem": 2,
+            "vcpu": 8,
+            "ports":{
+                "port1":{
+                    "type": "port"
+                },
+                "port2":{
+                    "type": "port"
+                }
+            }
+        },
+        "vm2": {
+            "type": "VM",
+            "vmem": 2,
+            "vcpu": 8,
+            "ports":{
+                "port1":{
+                    "type": "port"
+                },
+                "port2":{
+                    "type": "port"
+                }
+            }
+        },
+        "vc1":{
+            "type": "VC",
+            "src": "vm1.port1",
+            "dest": "vm2.port2"
+        }
+}
+
+}
